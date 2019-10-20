@@ -1,0 +1,332 @@
+@import url("https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css");
+@import url("https://fonts.googleapis.com/css?family=Heebo:300,400,500|Playfair+Display:700");
+@import url("https://use.fontawesome.com/releases/v5.7.2/css/all.css");
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+img {
+  width: 100%;
+  max-width: 100%;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong {
+  font-family: "Heebo", sans-serif;
+  font-weight: 700;
+}
+h1 {
+  font-size: 36px;
+}
+.text-black {
+  color: #111111 !important;
+}
+.text-bold {
+  font-weight: 500 !important;
+}
+html {
+  scroll-behavior: smooth;
+  -webkit-scroll-behavior: smooth;
+}
+body {
+  line-height: 1;
+  font-family: "Heebo", sans-serif;
+  color: #111111;
+  font-size: 14px;
+  overflow-x: hidden;
+}
+.search-group {
+  position: relative;
+  width: 20px;
+  margin-bottom: 0px;
+  border-bottom: 1px solid transparent;
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -ms-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+.search-group.active {
+  width: 230px;
+  border-bottom: 1px solid #cdcdcc;
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -ms-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+.search-group .form-control {
+  padding-right: 25px;
+  border: 0 none;
+  border-radius: 0;
+  padding-left: 2px;
+  box-shadow: none;
+  font-size: 13px;
+  font-weight: 300;
+}
+.btn-search {
+  cursor: pointer;
+  position: absolute;
+  right: 3px;
+  top: 10px;
+  font-size: 16px;
+  z-index: 99;
+  color: #636363;
+}
+.table tbody tr {
+  border-bottom: 1px solid #eeeeee;
+}
+.table tbody tr:hover {
+  border-color: transparent;
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12),
+    0 1px 2px rgba(0, 0, 0, 0.24);
+  -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  -ms-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+.table tr td,
+.table thead th {
+  border: 0 none;
+  font-size: 13px;
+  padding: 1.2em 0.75em;
+}
+.table thead th {
+  font-weight: 500;
+  text-shadow: none;
+  background: #636363;
+  color: #ffffff;
+  border-right: 1px solid #919191;
+}
+.table tr td {
+  font-weight: 300;
+}
+/* ===================== DATEPICKER ================= */
+.datefilterWrapper input {
+  font-weight: 300;
+  font-family: "Heebo", sans-serif;
+  font-size: 13px;
+  color: #636363;
+  border: 1px solid #e0e0e0;
+  padding: 7px;
+  margin-right: 10px;
+}
+.datefilterWrapper
+  .react-datepicker-popper[data-placement^="bottom"]
+  .react-datepicker__triangle,
+.react-datepicker-popper[data-placement^="bottom"]
+  .react-datepicker__triangle::before {
+  display: none;
+}
+.datefilterWrapper .react-datepicker {
+  font-family: "Heebo", sans-serif;
+  border: 0 none;
+  border-radius: 0;
+  background: #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12),
+    0 1px 2px rgba(0, 0, 0, 0.24);
+  -ms-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+.datefilterWrapper .react-datepicker__header {
+  border: 0 none;
+  background: none;
+}
+.react-datepicker__current-month,
+.react-datepicker-time__header,
+.react-datepicker-year-header {
+  color: inherit;
+  font-weight: 400;
+  font-size: 14px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e0e0e0;
+}
+.react-datepicker__day-names {
+  white-space: nowrap;
+  border-bottom: 1px solid #e0e0e0;
+}
+.react-datepicker__day-name {
+  text-transform: uppercase;
+  font-size: 11px;
+  font-weight: 600;
+  color: #636363;
+}
+.react-datepicker__day--keyboard-selected,
+.react-datepicker__month-text--keyboard-selected,
+.react-datepicker__quarter-text--keyboard-selected,
+.react-datepicker__day--keyboard-selected:hover,
+.react-datepicker__month-text--keyboard-selected:hover,
+.react-datepicker__quarter-text--keyboard-selected:hover,
+.react-datepicker__day:hover,
+.react-datepicker__month-text:hover,
+.react-datepicker__quarter-text:hover,
+.react-datepicker__day--selected,
+.react-datepicker__day--in-selecting-range,
+.react-datepicker__day--in-range,
+.react-datepicker__month-text--selected,
+.react-datepicker__month-text--in-selecting-range,
+.react-datepicker__month-text--in-range,
+.react-datepicker__quarter-text--selected,
+.react-datepicker__quarter-text--in-selecting-range,
+.react-datepicker__quarter-text--in-range {
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  font-weight: normal;
+}
+.circle {
+  display: inline-block;
+  height: 8px;
+  width: 8px;
+  margin-right: 0.4rem;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  border-radius: 50%;
+}
+.circle.active {
+  background: #00cc00;
+}
+.circle.inactive {
+  background: #f00f00;
+}
+/* -------------------- SCROLLBAR ------------------ */
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+/* ::-webkit-scrollbar-track { */
+/* -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); */
+/* } */
+
+::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  outline: 1px solid slategrey;
+}
+
+/* ================= RESPONSIVE =============== */
