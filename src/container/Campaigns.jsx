@@ -120,6 +120,7 @@ export default class Campaigns extends Component {
                 selected={this.state.startDate}
                 onSelect={this.handleSelectDate}
                 onChange={this.handleChangeDateStart}
+                maxDate={this.state.endDate ? new Date(this.state.endDate) : null }
               />
               <DatePicker
                 placeholderText="Select End date"
